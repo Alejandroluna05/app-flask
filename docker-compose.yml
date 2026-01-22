@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  flask-app:
+    image: appiaw/flask-app:1.0
+    container_name: flask_app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mysqlite-db:/mysqlite-db
+    environment:
+      - DB_PATH=/mysqlite-db/coches.db
