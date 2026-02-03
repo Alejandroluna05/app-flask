@@ -36,8 +36,8 @@ jobs:
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/flask-app:latest
             docker stop flask-app || true
             docker rm flask-app || true
-            docker run -d \
-  			--name flask-app \
-  			-p 80:80 \
-  			${{ secrets.DOCKERHUB_USERNAME }}/flask-app:latest
+            docker run -d \ 
+			--name flask-app \ 
+			-p 80:80 \ 
+			${{ secrets.DOCKERHUB_USERNAME }}/flask-app:latest >
 
