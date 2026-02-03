@@ -9,6 +9,6 @@ COPY . .
 
 ENV DB_PATH=/mysqlite-db/coches.db
 
-EXPOSE 5000
+EXPOSE 80
 
 CMD ["flask", "--app", "aplicacion.py", "run", "--host=0.0.0.0"]
